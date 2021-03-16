@@ -9,6 +9,7 @@ import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
 import Badge from "@material-ui/core/Badge";
 import Avatar from "@material-ui/core/Avatar";
+import Drawer from "@material-ui/core/Drawer";
 
 //material-ui Icons imports
 import DashboardSharpIcon from "@material-ui/icons/DashboardSharp";
@@ -69,7 +70,8 @@ const AppSidebar = () => {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <Box
+      <Drawer
+        variant="permanent"
         className={classes.drawer}
         classes={{
           paper: classes.drawerPaper,
@@ -141,7 +143,7 @@ const AppSidebar = () => {
           <Typography component="span">Marry</Typography>
           <ExpandMoreIcon />
         </Box>
-      </Box>
+      </Drawer>
     </div>
   );
 };
