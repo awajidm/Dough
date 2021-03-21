@@ -76,7 +76,7 @@ const ProductCard = ({ name, subtitle, price, image, user }) => {
       />
 
       <CardContent className={classes.content}>
-        <img height="120" src={image} title="Product 1" />
+        <img height="120" src={image} alt="Product 1" />
       </CardContent>
 
       <CardContent className={classes.content}>

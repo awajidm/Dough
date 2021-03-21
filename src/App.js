@@ -6,6 +6,7 @@ import { pink } from "@material-ui/core/colors";
 
 import AppSidebar from "./components/AppSidebar";
 import Product from "./components/Product/Product";
+import Stock from "./components/Stock/Stock";
 
 const theme = createMuiTheme({
   palette: {
@@ -24,7 +25,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <AppSidebar />
         <Switch>
-          <Route path="/product" component={Product} exact />
+          <Route path="/stock" component={Stock} exact />
         </Switch>
       </ThemeProvider>
     </Router>

@@ -63,7 +63,7 @@ const products = [
     subtitle: `Dunkin's`,
     price: 45,
     image: "/images/P2.png",
-    user: "creator",
+    user: "user",
   },
   {
     id: "3",
