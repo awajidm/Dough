@@ -25,7 +25,7 @@ export const getStocks = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: ALL_STOCK_FAIL,
-      payload: error.response.data.message,
+      payload: "error",
     });
   }
 };

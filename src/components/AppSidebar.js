@@ -9,7 +9,7 @@ import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
 import Badge from "@material-ui/core/Badge";
 import Avatar from "@material-ui/core/Avatar";
-import Drawer from "@material-ui/core/Drawer";
+import Grid from "@material-ui/core/Grid";
 
 //material-ui Icons imports
 import DashboardSharpIcon from "@material-ui/icons/DashboardSharp";
@@ -23,17 +23,9 @@ import PersonIcon from "@material-ui/icons/Person";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-  },
-  drawer: {
-    width: drawerWidth,
-  },
-  drawerPaper: {
-    width: drawerWidth,
   },
   sidebarLogo: {
     padding: 20,
@@ -70,18 +62,12 @@ const AppSidebar = () => {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <Drawer
-        variant="permanent"
-        className={classes.drawer}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
-        <div className={classes.sidebarLogo}>
+      <Grid container>
+        <Grid item xs={12} className={classes.sidebarLogo}>
           <img src="/images/Logo.png" alt="Logo" width={100} />
-        </div>
+        </Grid>
         <Divider />
-        <div className={classes.sideButtons}>
+        <Grid item xs={12} className={classes.sideButtons}>
           <Button
             variant="contained"
             color="secondary"
@@ -124,16 +110,16 @@ const AppSidebar = () => {
           <Button className={classes.button} startIcon={<PersonIcon />}>
             User
           </Button>
-        </div>
-        <Box ml={2}>
+        </Grid>
+        <Grid item xs={12} style={{ paddingLeft: 20 }}>
           <Box component="span" mr={2}>
             <Badge badgeContent={6} color="primary" overlap="circle">
               <NotificationsNoneIcon />
             </Badge>
           </Box>
           Notifications
-        </Box>
-        <Box className={classes.profile}>
+        </Grid>
+        <Grid item xs={12} className={classes.profile}>
           <Avatar
             alt="Marry"
             src="/images/Logo.png"
@@ -142,8 +128,8 @@ const AppSidebar = () => {
           />
           <Typography component="span">Marry</Typography>
           <ExpandMoreIcon />
-        </Box>
-      </Drawer>
+        </Grid>
+      </Grid>
     </div>
   );
 };
