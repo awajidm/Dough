@@ -13,6 +13,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Button from "@material-ui/core/Button";
 
 import AppHeader from "../Layout/AppHeader";
+import MoveStock from "./MoveStock";
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -89,9 +90,7 @@ const Stock = () => {
                       : "No product"}
                   </TableCell>
                   <TableCell align="center">
-                    <Button variant="contained" color="primary" size="small">
-                      Move Stock
-                    </Button>
+                    <MoveStock />
                   </TableCell>
                 </TableRow>
               ))}
