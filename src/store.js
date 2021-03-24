@@ -3,9 +3,11 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 import { stockReducer } from "./reducers/stockReducer";
+import { transferStockReducer } from "./reducers/transferStockReducer";
 
 const reducer = combineReducers({
   stock: stockReducer,
+  transferStock: transferStockReducer,
 });
 
 let intitialState = {};

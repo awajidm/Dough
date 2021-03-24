@@ -47,7 +47,7 @@ const DialogContent = withStyles((theme) => ({
   },
 }))(MuiDialogContent);
 
-export default function CustomizedDialogs() {
+export default function AddStock() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -58,28 +58,15 @@ export default function CustomizedDialogs() {
   };
 
   return (
-    <div>
-      <Button
-        variant="contained"
-        color="primary"
-        size="small"
-        margin="dense"
-        onClick={handleClickOpen}
-      >
-        Move Stock
-      </Button>
-      <Dialog
-        onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
-        open={open}
-      >
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Move Stock
-        </DialogTitle>
-        <DialogContent dividers>
-          <MoveStockStepper />
-        </DialogContent>
-      </Dialog>
-    </div>
+    <Dialog
+      onClose={handleClose}
+      aria-labelledby="customized-dialog-title"
+      open={open}
+    >
+      <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+        Add Stock
+      </DialogTitle>
+      <DialogContent dividers>form to add stock will go here</DialogContent>
+    </Dialog>
   );
 }

@@ -70,7 +70,7 @@ const AppSidebar = () => {
         <Grid item xs={12} className={classes.sideButtons}>
           <Button
             variant="contained"
-            color="secondary"
+            color="primary"
             className={classes.button}
             startIcon={<DashboardSharpIcon />}
           >

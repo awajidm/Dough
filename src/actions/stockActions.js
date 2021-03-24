@@ -4,9 +4,6 @@ import {
   ALL_STOCK_REQUEST,
   ALL_STOCK_SUCCESS,
   ALL_STOCK_FAIL,
-  STOCK_DETAILS_REQUEST,
-  STOCK_DETAILS_SUCCESS,
-  STOCK_DETAILS_FAIL,
   CLEAR_ERROR,
 } from "../constants/stockConstants";
 
@@ -28,4 +25,10 @@ export const getStocks = () => async (dispatch) => {
       payload: "error",
     });
   }
+};
+
+export const clearErrors = () => async (dispatch) => {
+  dispatch({
+    type: CLEAR_ERROR,
+  });
 };
